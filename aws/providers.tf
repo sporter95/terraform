@@ -1,8 +1,8 @@
 terraform {
   required_providers {
-    godaddy = {
-      source = "n3integration/godaddy"
-      #version = "1.9.1"
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 4.0"
     }
     aws = {
       source  = "hashicorp/aws"
@@ -11,6 +11,6 @@ terraform {
   }
 }
 
-provider "godaddy" {
-  # Configuration options
+provider "cloudflare" {
+  #api_token = var.cloudflare_api_token
 }
